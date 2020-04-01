@@ -28,150 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tb_main = new System.Windows.Forms.TabControl();
+            this.tp_SQL = new System.Windows.Forms.TabPage();
+            this.tp1_tlp_main = new System.Windows.Forms.TableLayoutPanel();
+            this.uC_SQLTool1 = new UserControlTools.UC_SQLTool();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_Var = new System.Windows.Forms.TextBox();
-            this.btn_SQLToPG = new System.Windows.Forms.Button();
-            this.btn_PGToSQL = new System.Windows.Forms.Button();
-            this.txt_ori = new System.Windows.Forms.TextBox();
-            this.txt_result = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tb_main.SuspendLayout();
+            this.tp_SQL.SuspendLayout();
+            this.tp1_tlp_main.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tb_main
+            // 
+            this.tb_main.Controls.Add(this.tp_SQL);
+            this.tb_main.Controls.Add(this.tabPage2);
+            this.tb_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_main.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tb_main.Location = new System.Drawing.Point(0, 0);
+            this.tb_main.Name = "tb_main";
+            this.tb_main.SelectedIndex = 0;
+            this.tb_main.Size = new System.Drawing.Size(993, 597);
+            this.tb_main.TabIndex = 0;
+            // 
+            // tp_SQL
+            // 
+            this.tp_SQL.Controls.Add(this.tp1_tlp_main);
+            this.tp_SQL.Location = new System.Drawing.Point(4, 30);
+            this.tp_SQL.Name = "tp_SQL";
+            this.tp_SQL.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_SQL.Size = new System.Drawing.Size(985, 563);
+            this.tp_SQL.TabIndex = 0;
+            this.tp_SQL.Text = "SQL相關";
+            this.tp_SQL.UseVisualStyleBackColor = true;
+            // 
+            // tp1_tlp_main
+            // 
+            this.tp1_tlp_main.ColumnCount = 1;
+            this.tp1_tlp_main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tp1_tlp_main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tp1_tlp_main.Controls.Add(this.uC_SQLTool1, 0, 0);
+            this.tp1_tlp_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tp1_tlp_main.Location = new System.Drawing.Point(3, 3);
+            this.tp1_tlp_main.Name = "tp1_tlp_main";
+            this.tp1_tlp_main.RowCount = 1;
+            this.tp1_tlp_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tp1_tlp_main.Size = new System.Drawing.Size(979, 557);
+            this.tp1_tlp_main.TabIndex = 0;
+            // 
+            // uC_SQLTool1
+            // 
+            this.uC_SQLTool1.Location = new System.Drawing.Point(5, 5);
+            this.uC_SQLTool1.Margin = new System.Windows.Forms.Padding(5);
+            this.uC_SQLTool1.Name = "uC_SQLTool1";
+            this.uC_SQLTool1.Size = new System.Drawing.Size(969, 547);
+            this.uC_SQLTool1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(985, 563);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel1.Controls.Add(this.txt_result, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_ori, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_SQLToPG, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_PGToSQL, 2, 0);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.56281F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.43719F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(993, 597);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(979, 557);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.82716F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.17284F));
-            this.tableLayoutPanel2.Controls.Add(this.txt_Var, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(242, 68);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // txt_Var
-            // 
-            this.txt_Var.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txt_Var.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_Var.Location = new System.Drawing.Point(109, 19);
-            this.txt_Var.Name = "txt_Var";
-            this.txt_Var.Size = new System.Drawing.Size(130, 29);
-            this.txt_Var.TabIndex = 0;
-            this.txt_Var.Text = "SQLContent";
-            // 
-            // btn_SQLToPG
-            // 
-            this.btn_SQLToPG.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_SQLToPG.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_SQLToPG.Location = new System.Drawing.Point(251, 14);
-            this.btn_SQLToPG.Name = "btn_SQLToPG";
-            this.btn_SQLToPG.Size = new System.Drawing.Size(126, 46);
-            this.btn_SQLToPG.TabIndex = 1;
-            this.btn_SQLToPG.Text = "SQL To C#";
-            this.btn_SQLToPG.UseVisualStyleBackColor = true;
-            this.btn_SQLToPG.Click += new System.EventHandler(this.btn_SQLToPG_Click);
-            // 
-            // btn_PGToSQL
-            // 
-            this.btn_PGToSQL.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_PGToSQL.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_PGToSQL.Location = new System.Drawing.Point(499, 14);
-            this.btn_PGToSQL.Name = "btn_PGToSQL";
-            this.btn_PGToSQL.Size = new System.Drawing.Size(126, 46);
-            this.btn_PGToSQL.TabIndex = 1;
-            this.btn_PGToSQL.Text = "C# To SQL";
-            this.btn_PGToSQL.UseVisualStyleBackColor = true;
-            this.btn_PGToSQL.Click += new System.EventHandler(this.btn_PGToSQL_Click);
-            // 
-            // txt_ori
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txt_ori, 2);
-            this.txt_ori.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_ori.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_ori.Location = new System.Drawing.Point(3, 77);
-            this.txt_ori.Multiline = true;
-            this.txt_ori.Name = "txt_ori";
-            this.txt_ori.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_ori.Size = new System.Drawing.Size(490, 517);
-            this.txt_ori.TabIndex = 0;
-            // 
-            // txt_result
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txt_result, 2);
-            this.txt_result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_result.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_result.Location = new System.Drawing.Point(499, 77);
-            this.txt_result.Multiline = true;
-            this.txt_result.Name = "txt_result";
-            this.txt_result.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_result.Size = new System.Drawing.Size(491, 517);
-            this.txt_result.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(3, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "變數名稱";
             // 
             // LVBTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 597);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tb_main);
             this.Name = "LVBTool";
             this.Text = "LVBTool";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tb_main.ResumeLayout(false);
+            this.tp_SQL.ResumeLayout(false);
+            this.tp1_tlp_main.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.TabControl tb_main;
+        private System.Windows.Forms.TabPage tp_SQL;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TableLayoutPanel tp1_tlp_main;
+        private UserControlTools.UC_SQLTool uC_SQLTool1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txt_result;
-        private System.Windows.Forms.TextBox txt_ori;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txt_Var;
-        private System.Windows.Forms.Button btn_SQLToPG;
-        private System.Windows.Forms.Button btn_PGToSQL;
-        private System.Windows.Forms.Label label1;
     }
 }
 
