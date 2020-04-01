@@ -4,3 +4,6 @@ BEGIN
 	--PRINT'ok'
 	DROP TABLE #ROY123
 END
+
+--清除執行計劃
+dbcc  freeproccache ; 
