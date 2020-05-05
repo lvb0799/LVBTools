@@ -47,3 +47,13 @@ t.schema_name, t.table_name
 --, t.index_name
 ORDER BY
 2 desc
+
+
+--查看哪個SP用這個table
+SELECT sys.sysobjects.name,definition 
+FROM sys.sql_modules 
+inner join sys.sysobjects on sys.sql_modules.object_id=sys.sysobjects.id
+WHERE 1=1
+--and sys.sysobjects.name like 'SP%'
+--and object_id = (OBJECT_ID(N'名稱'))
+and definition LIKE '%table名稱%'
